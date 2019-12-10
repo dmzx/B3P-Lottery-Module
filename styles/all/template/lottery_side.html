@@ -1,0 +1,21 @@
+{% if S_LOTTERY_ENABLED %}
+{{ definition.LR_BLOCK_H_L }}{% if definition.S_BLOCK_ICON %}
+{% if definition.FA_ENABLED %}
+<i class="icon fa {{ definition.FA_ICON }}" style="font-size: {{ definition.FA_SIZE }}px;" aria-hidden="true"></i>
+{% else %}
+<img src="{{ definition.IMAGE_SRC }}" width="{{ definition.IMAGE_WIDTH }}" height="{{ definition.IMAGE_HEIGHT }}" alt="" />
+{% endif %}
+{% endif %} {{ LOTTERY_NAME }}{{ definition.LR_BLOCK_H_R }}
+{{ lang('LOTTERY_LAST_WINNER') }}<br />
+<strong>{{ LAST_WINNER }}</strong>
+<hr class="dashed" />
+{{ lang('LOTTERY_JACKPOT') }}<br />
+<strong>{{ JACKPOT }}</strong> {{ CASH_NAME }}<br /><br />
+{{ lang('LOTTERY_PLAYERS') }} <strong>{{ NO_OF_PLAYERS }}</strong><br />
+{{ lang('LOTTERY_TICKETS') }} <strong>{{ NO_OF_TICKETS }}</strong>
+<hr class="dashed" />
+{{ lang('LOTTERY_NEXT_DRAW') }}<br />
+<strong>{{ NEXT_DRAWING }}</strong><br /><br />
+<a href="{{ U_LOTTERY }}">{{ LOTTERY_GOTO }}</a>
+{{ definition.LR_BLOCK_F_L }}{{ definition.LR_BLOCK_F_R }}
+{% endif %}

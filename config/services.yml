@@ -1,0 +1,12 @@
+services:
+    dmzx.b3plottery.b3plottery:
+        class: dmzx\b3plottery\b3plottery
+        arguments:
+            - '@config'
+            - '@dbal.conn'
+            - '@template'
+            - '@user'
+            - '%core.table_prefix%'
+            - '@controller.helper'
+        tags:
+            - { name: board3.portal.module }
